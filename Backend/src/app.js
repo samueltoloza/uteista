@@ -2,6 +2,9 @@ import express from "express";
 
 const app = express();
 
+import routerEstudiante from "./routers/routerEstudiante.js";
+app.use("/estudiantes", routerEstudiante);
+
 app.set("port", 4000);
 
 app.get("/", (req, res) => {
